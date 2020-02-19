@@ -9,7 +9,7 @@ padding:0;
 width: 100%;
 display: flex;
 justify-content: flex-end;
-background-color: cornflowerblue;
+background-color: #DEDEDE;
 position: fixed;
 
 }
@@ -17,8 +17,8 @@ position: fixed;
 .nav-list {
     display: flex;
     list-style: none;
-    font-size: 2rem;
-    font-weight: 400;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
 }
 
 .nav-list a {
@@ -28,6 +28,21 @@ position: fixed;
     text-decoration: none;
 }
 
+.nav-list a:hover {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    text-decoration: none;
+    background-color: #4A5B61;
+    color: #ffffff;
+}
+
+a:visited {
+
+color: #4A5B61
+}
+
+
 #welcome-section {
     display: flex;
     flex-direction: column;
@@ -35,19 +50,53 @@ position: fixed;
     align-items: center;
     width: 100%;
     Height: 100vh;
-    background-color: grey;
-
+    background-color: #ffffff;
 
 }
 
-h1, h3{ color: white;
+h1 { color: #4A5B61;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    font-size: 2.2rem;
 }
+
+h3 {
+    color: #4A5B61;
+    font-family: 'Dosis', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+
 
 #project-list {
 
     display: flex; 
     justify-content: space-around;
+    padding: 1.5rem;
+margin: 1.5rem;
 }
+
+#projects {
+text-align: center;
+background-color: #F2F2F2;
+padding: 1.5rem;
+
+}
+img {
+max-width: 300px;
+
+}
+
+figcaption {
+background-color: #4A5B61;
+color: #ffffff;
+font-family: 'Dosis', sans-serif;
+    font-weight: 100;
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    margin: 0;
+}
+
 #contact {
 display: flex;
 padding: 1.5rem;
@@ -70,8 +119,8 @@ i {
 footer {
 font-size: 1.5rem;
 height: 60px;
-background-color: grey;
-color: #ffffff;
+background-color: #DEDEDE;
+color: #4A5B61;
 display: flex;
 align-items: center;
 justify-content: center;
