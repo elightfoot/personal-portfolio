@@ -1,0 +1,9 @@
+:root {
+box-sizing: border-box;
+background-color: #dfdfdf;
+}
+
+a > img {
+    height : 12rem;
+    margin: 6px;
+}
