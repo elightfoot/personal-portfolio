@@ -7,3 +7,12 @@ a > img {
     height : 12rem;
     margin: 6px;
 }
+
+button {
+height: 2.5rem;
+border-radius: 6px;
+font-size: .8rem;
+background-color: white; 
+font-weight: bold;
+
+}

@@ -5,30 +5,68 @@ import { people } from '../Data/people.js'
 
 console.log("Hi there! My first Java Script code!")
 
-console.log(document.querySelector('.greeting'))
 
-let greetingDiv = document.querySelector('.greeting')
-
+let gallery = document.querySelector('.gallery')
 
 
-let castList = document.createElement("ul")
 
-let counter = 1
+const maleCharacters = people.filter(person => person.gender === "male")
 
-people.forEach((person) => {
- let nameItem = document.createElement("li")
- nameItem.textContent = person.name
- castList.appendChild(nameItem)
+const femaleCharacters = people.filter(person => person.gender === "female")
 
+
+const otherCharacters = people.filter(person => person.gender === "n/a" || person.gender === "none" || person.gender === "hermaphrodite")
+
+
+let maleButton = document.querySelector('#maleButton')
+let femaleButton = document.querySelector('#femaleButton')
+let otherButton = document.querySelector('#otherButton')
+
+maleButton.addEventListener("click", function( event){
+    populateDOM(maleCharacters)
+
+})
+femaleButton.addEventListener("click", function( event){
+    populateDOM(femaleCharacters)
+
+})
+otherButton.addEventListener("click", function( event){
+    populateDOM(otherCharacters)
+
+})
+
+
+function getLastNumber(url) {
+   let end = url.lastIndexOf('/')
+   let start = end - 2
+   if(url.charAt(start) === '/'){
+       start++
+   }
+   
+  return url.slice(start,end)
+
+}
+
+function removeChildren(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+      }
+}
+
+    function populateDOM(characters) {
+        removeChildren(gallery)
+characters.forEach((person) => {
+    let imageNum = getLastNumber(person.url)
  let personAnchor = document.createElement("a")
  personAnchor.href = "#"
  let personImg = document.createElement("img")
- personImg.src = `https://starwars-visualguide.com/assets/img/characters/${counter}.jpg`
+ personImg.src = `https://starwars-visualguide.com/assets/img/characters/${imageNum}.jpg`
 
  personImg.addEventListener('error', (event) =>{
      personImg.hidden = true
 //personImg.src = '../Images/mountains.jpg'
  })
+
 personImg.addEventListener("click", function ( event ){
     console.log('thanks for clicking')
 
@@ -36,9 +74,9 @@ personImg.addEventListener("click", function ( event ){
 })
 
 personAnchor.appendChild(personImg)
- greetingDiv.appendChild(personAnchor)
- counter++
+ gallery.appendChild(personAnchor)
+ //counter++
 })
+    }
 
-
-greetingDiv.appendChild(castList)
+populateDOM(people)
