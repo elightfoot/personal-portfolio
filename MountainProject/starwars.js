@@ -2,7 +2,7 @@
 import { films } from '../Data/films.js'
 
 import { people } from '../Data/people.js'
-
+//import { removeChildren } from '../utils.js'
 console.log("Hi there! My first Java Script code!")
 
 
@@ -37,15 +37,15 @@ otherButton.addEventListener("click", function( event){
 
 
 function getLastNumber(url) {
-   let end = url.lastIndexOf('/')
-   let start = end - 2
-   if(url.charAt(start) === '/'){
-       start++
-   }
-   
-  return url.slice(start,end)
-
-}
+    let end = url.lastIndexOf('/')
+    let start = end - 2
+    if(url.charAt(start) === '/'){
+        start++
+    }
+    
+   return url.slice(start,end)
+ 
+ }
 
 function removeChildren(element) {
     while (element.firstChild) {
@@ -53,8 +53,8 @@ function removeChildren(element) {
       }
 }
 
-    function populateDOM(characters) {
-        removeChildren(gallery)
+   function populateDOM(characters) {
+        removeChildren(gallery) 
 characters.forEach((person) => {
     let imageNum = getLastNumber(person.url)
  let personAnchor = document.createElement("a")

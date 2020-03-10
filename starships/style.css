@@ -1,0 +1,21 @@
+:root {
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    border: solid 2px grey;
+    padding-right: 1rem;
+}
+
