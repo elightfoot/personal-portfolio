@@ -22,7 +22,7 @@ function populateNav(starships) {
     starships.forEach(starship => {
         let shipAnchor = document.createElement("a")
         shipAnchor.href = "#"
-        shipAnchor.textContent = starship.name
+        //shipAnchor.textContent = starship.name
         let listItem = document.createElement("li")
         listItem.textContent = starship.name
 
