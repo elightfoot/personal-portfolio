@@ -7,7 +7,7 @@ export function removeChildren(element) {
 export function getLastNumber(url) {
     let end = url.lastIndexOf('/')
     let start = end - 2
-    if(url.charAt(start) === '/'){
+    if (url.charAt(start) === '/'){
         start++
     }
     

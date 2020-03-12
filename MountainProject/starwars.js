@@ -54,7 +54,7 @@ function removeChildren(element) {
 }
 
    function populateDOM(characters) {
-        removeChildren(gallery) 
+       removeChildren(gallery) 
 characters.forEach((person) => {
     let imageNum = getLastNumber(person.url)
  let personAnchor = document.createElement("a")
