@@ -1,4 +1,3 @@
-
 import { removeChildren, getLastNumber } from "../utils.js"
 import { starships } from "../Data/starships.js"
 
@@ -14,8 +13,17 @@ const modalButton = document.querySelector(".modal-close")
 
 const modalMessage = document.querySelector(".dialog-message")
 
+const modalBackground = document.querySelector(".modal-background")
 modalButton.addEventListener("click", () => {
     modalButton.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener("click", () => {
+    modalDialog.classList.toggle("is-active")
+})
+
+modalButton.addEventListener("click", () => {
+    modalDialog.classList.toggle("is-active")
 })
 
 function populateNav(starships) {
@@ -27,7 +35,7 @@ function populateNav(starships) {
         listItem.textContent = starship.name
 
 shipAnchor.addEventListener("click", event => {
-   let shipName = event.target.textcontent
+   let shipName = event.target.textContent
    const foundShip = starships.find(ship => 
    ship.name === shipName )
    console.log(foundShip)

@@ -6,9 +6,6 @@ header{
     justify-content: center;
 }
 
-.container {
-    display: flex;
-}
 a{
     text-decoration: none;
     font-size: 1.25rem;
@@ -21,5 +18,9 @@ li {
 nav {
     border: solid 2px grey;
     padding-right: 1rem;
+   width: 200px;
 }
 
+.container {
+    display: flex;
+}
