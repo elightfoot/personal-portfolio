@@ -1,26 +1,44 @@
 :root {
     box-sizing: border-box;
+    background-color: #dfdfdf;
+    width: 100%;
+    Height: 100vh;
 }
-header{
+header, footer{
     display: flex;
     justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    font-size: 1.25rem;
-}
-
-li {
-    list-style-type: none;
-}
-
-nav {
-    border: solid 2px grey;
-    padding-right: 1rem;
-   width: 200px;
-}
-
 .container {
     display: flex;
+   justify-content: space-between ;
+    align-items: center;
+   
 }
+.nav {
+    border: solid 2px grey;
+    border-radius: 6px;
+    padding: 1rem;
+
+
+}
+a{
+    text-decoration: none;
+    font-size: 1rem;
+    list-style-type: none;
+    color: black;
+}
+
+ a:focus {
+     color: rgb(10, 10, 44);
+     font-weight: 600;
+ }
+
+
+
+img {
+    padding-left:10rem;
+    padding-right: 10rem;
+
+}
+
