@@ -19,24 +19,28 @@ header, footer{
     border: solid 2px grey;
     border-radius: 6px;
     padding: 1rem;
+   
 
 
+}
+main{
+    display:flex;
 }
 a{
     text-decoration: none;
     font-size: 1rem;
     list-style-type: none;
-    color: black;
+    color: white;
 }
 
  a:focus {
-     color: rgb(10, 10, 44);
+     color: rgb(33, 33, 214);
      font-weight: 600;
  }
 
 
 
-img {
+/*img {
     padding-left:10rem;
     padding-right: 10rem;
 
