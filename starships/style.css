@@ -7,6 +7,7 @@
 header, footer{
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 .container {
@@ -32,17 +33,21 @@ a{
     list-style-type: none;
     color: white;
 }
-
+a:hover{
+    font-size: larger;
+    color: lightgrey;
+}
  a:focus {
      color: rgb(33, 33, 214);
      font-weight: 600;
+     font-size: larger;
  }
 
 
 
-/*img {
-    padding-left:10rem;
-    padding-right: 10rem;
+img {
+    padding-left:10%;
+    padding-right: 20%;
 
 }
 
