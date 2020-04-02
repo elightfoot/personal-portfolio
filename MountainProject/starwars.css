@@ -12,6 +12,7 @@ header {
 a > img {
     height : 12rem;
     margin: 6px;
+    border-radius: 6px;
 }
 
 button {
