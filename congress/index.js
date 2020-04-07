@@ -1,4 +1,4 @@
-import { senators } from '../Data/senators.js'
+import { senators } from '../data/senators.js'
 
 // this is all about filter, map, reduce
 
@@ -8,19 +8,20 @@ const filterSenators = (prop, value) => {
     return senators.filter(senator => senator[prop] === value)
 }
 
-function simplifiedSenators(senatorArray)  
-return senatorArray.map(senator => {
-    let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
-    return {
-        id: senator.id,
-        name: `${senator.first_name}${middleName}${senator.last_name}`,
-        imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
-   seniority = parsInt(senator.seniority, 10)
-    }
-})
+function simplifiedSenators(senatorArray) {
+    return senatorArray.map(senator => {
+        let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
+        return {
+            id: senator.id,
+            name: `${senator.first_name}${middleName}${senator.last_name}`,
+            imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
+            seniority: parseInt(senator.seniority, 10),
+            votesWithPartyPct: senator.votes_with_party_pct
+        }
+    })
+}
 
 function populateContainer(smallSenatorsArray) {
-    
     return smallSenatorsArray.forEach(senator => {
         
         let senFigure = document.createElement('figure')
@@ -33,15 +34,29 @@ function populateContainer(smallSenatorsArray) {
         senFigure.appendChild(figImg)
         senFigure.appendChild(figCaption)
         container.appendChild(senFigure)
+        
     })
 }
 
 const republicans = filterSenators('party', 'R')
+const democrats = filterSenators('party', 'D')
 
 const mostSeniority = simplifiedSenators(republicans).reduce(
     (acc, senator) => {
-        return acc.seniorty > senator.seniority ? acc : senator
-    }, {}
+        return acc.seniority > senator.seniority ? acc : senator
+    }
 )
 
-populateContainer(mappedSenators)
+
+
+let loyalArray = []
+
+const mostLoyal = simplifiedSenators(democrats).reduce((acc, senator) => {
+    if (senator.votesWithPartyPct === 100){
+        loyalArray.push(senator)
+    }
+    return acc.votesWithPartyPct > senator.votesWithPartyPct ? acc : senator})
+
+console.log(mostSeniority)
+console.log(loyalArray)
+populateContainer(simplifiedSenators(republicans))
