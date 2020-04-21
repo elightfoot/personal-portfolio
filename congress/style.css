@@ -2,3 +2,25 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Dosis', sans-serif;
+    
+
+}
+
+body {
+    font-family: 'Dosis', sans-serif;
+
+}
+
+img {
+border-radius: 6px;
+
+}

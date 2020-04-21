@@ -1,10 +1,13 @@
-
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+  body {
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
+    background-color: lightgrey;
+  }
   .pokeContainer {
       display: flex;
       flex-wrap: wrap;
@@ -15,12 +18,14 @@ header {
   .scene {
     width: 200px;
     height: 260px;
-    border: 1px solid #CCC;
+  
     margin: 10px;
     perspective: 600px;
     border-radius: 30px;
+    
   }
   
+
   .card {
     width: 100%;
     height: 100%;
@@ -28,6 +33,9 @@ header {
     transform-style: preserve-3d;
     cursor: pointer;
     position: relative;
+   
+   
+    border-radius: 30px;
     
   }
   
@@ -40,22 +48,56 @@ header {
     width: 100%;
     height: 100%;
     color: white;
-    text-align: center;
-    font-size: .75rem;
+    font-family: 'Dosis', sans-serif;
+display: flex;
+flex-direction: column;
+
+text-align: center;
+justify-content: center;
+
+   
     backface-visibility: hidden;
     border-radius: 30px;
   }
+
   
   .card__face--front {
     background: red;
+    box-shadow: 10px 5px 5px grey;
+    font-size: 1.75rem;
+    font-family: 'Dosis', sans-serif;
   }
   
   .card__face--back {
     background: blue;
     transform: rotateY(180deg);
+    box-shadow: 10px 5px 5px grey;
+    font-size: 1rem;
+    font-family: 'Dosis', sans-serif;
+    text-align: center;
+
   }
   
   .card__face ul {
     text-align: left;
-    list-style-type: square;
+    list-style-type: circle;
+  
   }
+  .card__face li {
+   margin-bottom: 10px;
+   margin-top: 5px;
+  
+  }
+  button {
+    height: 2.5rem;
+    border-radius: 6px;
+    font-size: .8rem;
+    background-color: white; 
+    font-weight: bold;
+    
+    }
+
+    img {
+        max-width: 125px;
+        padding-left: 35px;
+    }
