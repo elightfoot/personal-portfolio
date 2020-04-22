@@ -8,7 +8,9 @@ const filterSenators = (prop, value) => {
     return senators.filter(senator => senator[prop] === value)
 }
 
+
 function simplifiedSenators(senatorArray) {
+    
     return senatorArray.map(senator => {
         let middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `
         return {
@@ -47,6 +49,18 @@ const mostSeniority = simplifiedSenators(republicans).reduce(
     }
 )
 
+let republicansButton = document.querySelector('#republicans')
+let democratsButton = document.querySelector('#Democrats')
+
+democratsButton.addEventListener("click", function( event){
+    
+    populateContainer(simplifiedSenators(democrats))
+  
+})
+republicansButton.addEventListener("click", function( event){
+    populateContainer(simplifiedSenators(republicans))
+
+})
 
 
 let loyalArray = []
@@ -59,4 +73,7 @@ const mostLoyal = simplifiedSenators(democrats).reduce((acc, senator) => {
 
 console.log(mostSeniority)
 console.log(loyalArray)
-populateContainer(simplifiedSenators(republicans))
+
+
+
+populateContainer(simplifiedSenators())
