@@ -39,7 +39,8 @@ position: fixed;
 
 a:visited {
 
-color: #4A5B61
+color: #4A5B61;
+text-decoration: none;
 }
 
 
