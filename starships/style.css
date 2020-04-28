@@ -12,7 +12,7 @@ header, footer{
 
 .container {
     display: flex;
-   justify-content: space-between ;
+   justify-content: center;
     align-items: center;
    
 }
@@ -26,6 +26,8 @@ header, footer{
 }
 main{
     display:flex;
+    align-items: center;
+    justify-content: center;
 }
 a{
     text-decoration: none;
@@ -45,10 +47,5 @@ a:hover{
 
 
 
-img {
-    padding-left: 22%;
-    padding-right: 22%;
-   
 
-}
 
