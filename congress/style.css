@@ -32,11 +32,28 @@ button {
     font-size: .8rem;
     background-color: white; 
     font-weight: bold;
-    
+     
     }
+#Democrats {
+    background-color: rgb(22, 11, 83);
+    color: white;
+}
+#Democrats:hover {
+    background-color: white;
+    color: rgb(22, 11, 83);
+}
+#republicans {
+    background-color: rgb(141, 7, 7);
+    color: white;
+}
+#republicans:hover {
+    background-color: white;
+    color: rgb(141, 7, 7);
+}
+
     .nav {
         display: flex;
-        justify-content: space-evenly;
-        padding-left: 400px;
-       padding-right: 400px;
+        justify-content: space-around;
+       padding-left: 25%;
+       padding-right: 25%;
     }

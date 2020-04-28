@@ -2,7 +2,11 @@
 box-sizing: border-box;
 background-color: #dfdfdf;
 }
+h1 {
+    font-family: 'Dosis', sans-serif;
+    
 
+}
 header {
     display: flex;
     justify-content: center;

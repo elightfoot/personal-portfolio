@@ -39,7 +39,11 @@ function populateContainer(smallSenatorsArray) {
         
     })
 }
-
+function removeChildren(element) {
+    while (element.firstChild) {
+        element.removeChild(element.firstChild);
+      }
+}
 const republicans = filterSenators('party', 'R')
 const democrats = filterSenators('party', 'D')
 
@@ -53,11 +57,12 @@ let republicansButton = document.querySelector('#republicans')
 let democratsButton = document.querySelector('#Democrats')
 
 democratsButton.addEventListener("click", function( event){
-    
+    removeChildren(container)
     populateContainer(simplifiedSenators(democrats))
   
 })
 republicansButton.addEventListener("click", function( event){
+    removeChildren(container)
     populateContainer(simplifiedSenators(republicans))
 
 })
